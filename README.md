@@ -2,7 +2,7 @@
 
 * In this case study I have built a movie recommendation system that analyze the users movie watching patterns and based on that it recommends movies to users.
 <br/>
-> * for example - Big websites like **Netflix**, **Amazon prime**, **YouTube**, **etc** uses movie recommendation systems.
+for example - Big websites like Netflix, Amazon prime, YouTube, etc uses movie recommendation systems.
 <br/>
 I always wonder that how do they recommend movies to their users and for that did some research on it, I find out that they have their own movie recommendation systems.
 
@@ -17,8 +17,17 @@ I always wonder that how do they recommend movies to their users and for that di
 > 3. Process
 > 4. Analyze
 > 5. Cosine similarity
-> 6. result
+> 6. Build model
+> 7. result
+
+* Required dependencies are Numpy, Pandas, Sklearn, difflib.
 
 1. _**Ask**_ - In this Phase I ask questions such as 1)Which type of data we require?, 2)How we going to collect the data?, 3) What kind of features we need?, etc.
 2. _**Prepare**_ - In this phase I collect the movies data
-3. _**Process**_ - In this phase I process the data means. First I load the csv data to pandas DataFrame after that check how many rows and columns this dataset contains, after that I select the required features for the movie recommendation system. \nWe allready know that the text data contains null values so replace the null values with the null string "". 
+3. _**Process**_ - In this phase I process the data means. First I load the csv data to pandas DataFrame after that check how many rows and columns this dataset contains, after that I select the required features for the movie recommendation system. \nWe allready know that the text data contains null values so replace the null values with the null string "", combine all the selected features, convert the text data to feature vectors using 'TfidfVectorizer()' it converts text data into numerical values.
+4. _**Analyze**_ - In this Phase I analyze the data.
+5. _**Cosine similarity**_ - Use cosine similarity to find the similarities and from this we get the similarity score.
+6. _**Build model**_ - get the movie name from the user and create a list with all the names in the dataset using tolist() function of pandas. then find a match for the movie name given by the user and from that find a close match i.e. first element of the list. after this step I find index of the movie with title getiing the list of similar movies. sort the list in descending order as higher the similarity score movie recommendation will be accurate.
+7. __**result**_ - and finally using a for loop we only recommend 30 movies to user from the sorted list.
+
+#### In this way this model recommends movies
