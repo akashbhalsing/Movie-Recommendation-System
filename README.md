@@ -2,7 +2,7 @@
 
 * In this case study I have built a movie recommendation system that analyze the users movie watching patterns and based on that it recommends movies to users.
 <br/>
->for example - Big websites like **Netflix, Amazon prime, YouTube, etc** uses movie recommendation systems.
+> * for example - Big websites like **Netflix**, **Amazon prime**, **YouTube**, **etc** uses movie recommendation systems.
 <br/>
 I always wonder that how do they recommend movies to their users and for that did some research on it, I find out that they have their own movie recommendation systems.
 
